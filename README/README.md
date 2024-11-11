@@ -3,6 +3,7 @@
 ## TODO
 - [x] Parse the documents and extract text
 - [ ] Investigate different chunking strategies
+  - [ ] Basic chunking 
 - [ ] Dense retriever vs sparse retriever
 - [ ] Check base performance with Milvus
 
@@ -32,6 +33,13 @@ Therefore, we can extract sections using a title followed by narrative texts unt
 
 We can also extract images using
 ![alt text](image-1.png)
+
+
+### Cleaning the data
+
+
+
+
 
 ## Installation
 - Install all required deps using `pip install -r requirements.txt`
