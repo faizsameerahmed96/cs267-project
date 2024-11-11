@@ -1,8 +1,15 @@
 # RAG on research papers
 
+## TODO
+- [x] Parse the documents and extract text
+- [ ] Investigate different chunking strategies
+- [ ] Dense retriever vs sparse retriever
+- [ ] Check base performance with Milvus
+
 
 ## Parsing the documents
-After investigating pymupdf,pymupdf4llm and unstructured, we found that using unstructured was the way to go because:
+### Extracting the information
+After investigating pymupdf, pymupdf4llm and unstructured in `explorations/pdf_parsing`, we found that using unstructured was the way to go because:
 - It provides an easy way to parse a PDF along with extracting images.
 - It provides a clean API and is widely used.
 
@@ -26,12 +33,11 @@ Therefore, we can extract sections using a title followed by narrative texts unt
 We can also extract images using
 ![alt text](image-1.png)
 
-## TODO
-- [x] Parse the documents and extract text
-- [ ] Investigate different chunking strategies
-- [ ] Dense retriever vs sparse retriever
-- [ ] Check base performance with Milvus
-
-
 ## Installation
 - Install all required deps using `pip install -r requirements.txt`
+
+
+
+## References
+[Unstructured for data extraction and cleaning](https://docs.unstructured.io/open-source/introduction/overview)<br/>
+[Notebook showing different ways to handle chunking](https://github.com/FullStackRetrieval-com/RetrievalTutorials/blob/main/tutorials/LevelsOfTextSplitting/5_Levels_Of_Text_Splitting.ipynb)
