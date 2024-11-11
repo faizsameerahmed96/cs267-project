@@ -3,9 +3,9 @@
 ## TODO
 - [x] Parse the documents and extract text
 - [ ] Investigate different chunking strategies
-  - [ ] Basic chunking 
+  - [ ] Come up with way to compare/benchmark
+  - [ ] Basic chunking + dense retriever
 - [ ] Dense retriever vs sparse retriever
-- [ ] Check base performance with Milvus
 
 
 ## Parsing the documents
@@ -43,9 +43,16 @@ We can also extract images using
 
 ## Installation
 - Install all required deps using `pip install -r requirements.txt`
+- We will be using Qdrant for the vector database. We can start it by using `docker compose up`
+- Add a `.env` file at the project root with the following variables
+  ```
+    OPENAI_API_KEY=st...
+  ```
+
 
 
 
 ## References
 [Unstructured for data extraction and cleaning](https://docs.unstructured.io/open-source/introduction/overview)<br/>
 [Notebook showing different ways to handle chunking](https://github.com/FullStackRetrieval-com/RetrievalTutorials/blob/main/tutorials/LevelsOfTextSplitting/5_Levels_Of_Text_Splitting.ipynb)
+Langchain OpenAI
