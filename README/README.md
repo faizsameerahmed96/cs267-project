@@ -4,8 +4,13 @@
 - [x] Parse the documents and extract text
 - [ ] Investigate different chunking strategies
   - [ ] Come up with way to compare/benchmark
-  - [ ] Basic chunking + dense retriever
+  - [x] Basic chunking + dense retriever
+- [ ] Agentic search => Allow it to make searches by itself, also allow it to open, and get parts of pdf.
+- [ ] Apache Airflow setup using redis
 - [ ] Dense retriever vs sparse retriever
+- [ ] Hybrid Search
+- [ ] If time permits, add image search
+- [ ] Make it recreatable and add documentation
 
 
 ## Parsing the documents
@@ -48,7 +53,6 @@ We can also extract images using
   ```
     OPENAI_API_KEY=st...
   ```
-
 
 
 
