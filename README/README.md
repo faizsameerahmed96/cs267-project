@@ -10,6 +10,7 @@
 - [ ] Dense retriever vs sparse retriever
 - [ ] Hybrid Search
 - [ ] If time permits, add image search
+- [ ] If time permits, add a UI or else make it a terminal command
 - [ ] Make it recreatable and add documentation
 
 
