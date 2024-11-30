@@ -48,7 +48,10 @@ We can also extract images using
 
 ## Data Ingestion
 ### Setting up Apache Airflow
-https://chatgpt.com/c/674a5449-2198-8001-a56d-178b30182ea0
+`pip install apache-airflow`
+`pip install "apache-airflow[kubernetes]"`
+![alt text](image-3.png)
+`./start-airflow.sh`
 
 
 
