@@ -5,8 +5,10 @@
 - [ ] Investigate different chunking strategies
   - [ ] Come up with way to compare/benchmark
   - [x] Basic chunking + dense retriever
+- [ ] Ingesting the data and add all the data into qdrant database
+  - [ ] Apache Airflow
+  - [ ] RabbitMQ- [ ] Apache Airflow setup using redis
 - [ ] Agentic search => Allow it to make searches by itself, also allow it to open, and get parts of pdf.
-- [ ] Apache Airflow setup using redis
 - [ ] Dense retriever vs sparse retriever
 - [ ] Hybrid Search
 - [ ] If time permits, add image search
@@ -44,6 +46,9 @@ We can also extract images using
 ### Cleaning the data
 
 
+## Data Ingestion
+### Setting up Apache Airflow
+https://chatgpt.com/c/674a5449-2198-8001-a56d-178b30182ea0
 
 
 

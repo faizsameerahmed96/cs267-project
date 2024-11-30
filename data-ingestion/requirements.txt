@@ -1,0 +1,5 @@
+qdrant-client==1.12.1
+unstructured==0.16.5
+unstructured-client==0.27.0
+unstructured-inference==0.8.1
+unstructured.pytesseract==0.3.1
