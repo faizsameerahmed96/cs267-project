@@ -5,7 +5,7 @@ import uuid
 from airflow.decorators import dag, task
 from langchain_openai import OpenAIEmbeddings
 from qdrant_client import QdrantClient
-from qdrant_client.models import Distance, VectorParams, PointStruct
+from qdrant_client.models import Distance, PointStruct, VectorParams
 from unstructured.partition.pdf import Element, partition_pdf
 
 client = QdrantClient(url="http://localhost:6333")
@@ -60,25 +60,24 @@ def PdfETLPipeline():
             ) as f:
                 f.write(element.text)
 
-        return output_id
+        return {"output_id": output_id, "file_path": pdf_file}
 
     @task
-    def process_chunks_task(output_id: str, output_folder: str):
+    def process_chunks_task(process_pdf_task_output: dict, output_folder: str):
         """
         Process the generated chunks and store them in the database or vector storage.
         """
-        print(f"Processing chunks for id ... {output_id}")
+        print(f"Processing chunks for id ... {process_pdf_task_output['output_id']}")
 
         # read chunks from the output folder
         elements = []
-        output_folder = f"{output_folder}/{output_id}"
+        output_folder = f"{output_folder}/{process_pdf_task_output['output_id']}"
         for file in os.listdir(output_folder):
             if file.endswith(".txt"):
                 page_count, idx = file.split("_")
                 idx.replace(".txt", "")
                 with open(f"{output_folder}/{file}", "r", encoding="utf-8") as f:
                     elements.append({"text": f.read(), "page": page_count, "idx": idx})
-
 
         embeddings = embeddings_model.embed_documents(
             [element["text"] for element in elements]
@@ -101,6 +100,7 @@ def PdfETLPipeline():
                     "text": element["text"],
                     "page": element["page"],
                     "idx": element["idx"],
+                    "pdf_file": process_pdf_task_output["file_path"],
                 },
             )
             points.append(point)
@@ -111,7 +111,7 @@ def PdfETLPipeline():
 
     # Define task dependencies
     process_chunks_task(
-        output_id=process_pdf_task(output_folder=output_folder),
+        process_pdf_task_output=process_pdf_task(output_folder=output_folder),
         output_folder=output_folder,
     )
 

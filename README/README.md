@@ -8,6 +8,7 @@
 - [x] Ingesting the data and add all the data into qdrant database
   - [x] Apache Airflow ETL
   - [ ] Write a script to import all
+  - [x] Add file name information
 - [ ] Agentic search => Allow it to make searches by itself, also allow it to open, and get parts of pdf.
 - [ ] Dense retriever vs sparse retriever
 - [ ] Hybrid Search
