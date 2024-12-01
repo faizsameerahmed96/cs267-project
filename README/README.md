@@ -5,9 +5,9 @@
 - [ ] Investigate different chunking strategies
   - [ ] Come up with way to compare/benchmark
   - [x] Basic chunking + dense retriever
-- [ ] Ingesting the data and add all the data into qdrant database
-  - [ ] Apache Airflow
-  - [ ] RabbitMQ- [ ] Apache Airflow setup using redis
+- [x] Ingesting the data and add all the data into qdrant database
+  - [x] Apache Airflow ETL
+  - [ ] Write a script to import all
 - [ ] Agentic search => Allow it to make searches by itself, also allow it to open, and get parts of pdf.
 - [ ] Dense retriever vs sparse retriever
 - [ ] Hybrid Search
