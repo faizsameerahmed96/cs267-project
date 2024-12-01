@@ -10,11 +10,9 @@
   - [ ] Write a script to import all
   - [x] Add file name information
 - [x] Create a basic agent
-- [ ] 
-- [ ] Dense retriever vs sparse retriever
-- [ ] Hybrid Search
-- [ ] If time permits, add image search
+- [ ] Add more functionality (ability to open pdf and read a particular page, query vector store with specific payload, etc.)
 - [ ] If time permits, add a UI or else make it a terminal command
+- [ ] If time permits, add image search
 - [ ] Make it recreatable and add documentation
 
 
