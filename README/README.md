@@ -9,7 +9,8 @@
   - [x] Apache Airflow ETL
   - [ ] Write a script to import all
   - [x] Add file name information
-- [ ] Agentic search => Allow it to make searches by itself, also allow it to open, and get parts of pdf.
+- [x] Create a basic agent
+- [ ] 
 - [ ] Dense retriever vs sparse retriever
 - [ ] Hybrid Search
 - [ ] If time permits, add image search
